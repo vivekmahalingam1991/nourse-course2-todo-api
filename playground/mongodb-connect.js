@@ -7,7 +7,7 @@ MongoClient.connect(process.env.MONGODB_URI||'mongodb://localhost:27017/TodoApp'
   return console.log('unable to connect to mongodb server');
   }
   console.log('connected to mongodb server');
-
+});
 
 // db.collection('todos').insertOne({
 // text :"something",
@@ -32,5 +32,4 @@ location:  "mumbai"
     return console.log('unable to insert todo',err);
   }
   console.log(JSON.stringify(result.ops[0]._id.getTimestamp(),undefined,2));
-});
 });
